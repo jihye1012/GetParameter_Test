@@ -51,8 +51,28 @@ public class testController {
 //        return "login";
 //    }
 
+//    @PostMapping("/re_login")
+//    public String re_login(HttpServletRequest req) {
+//        String id=req.getParameter("user_id");
+//        String pass=req.getParameter("user_pass");
+//        String name=req.getParameter("user_name");
+//        String email=req.getParameter("user_email");
+//        String tel=req.getParameter("user_tel");
+//        String local=req.getParameter("user_local");
+//
+//        System.out.println("ID : "+id);
+//        System.out.println("Password : "+pass);
+//        System.out.println("Name : "+name);
+//        System.out.println("Email : "+email);
+//        System.out.println("Tel : "+tel);
+//        System.out.println("Local : "+local);
+//
+//
+//        return "result";
+//    }
+
     @PostMapping("/re_login")
-    public String re_login(HttpServletRequest req) {
+    public String re_login(WebRequest req) {
         String id=req.getParameter("user_id");
         String pass=req.getParameter("user_pass");
         String name=req.getParameter("user_name");
