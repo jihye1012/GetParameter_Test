@@ -91,24 +91,39 @@ public class testController {
 //        return "result";
 //    }
 
-    @PostMapping("/re_login")
-    public String re_login(@RequestParam("user_id") String id,
-                           @RequestParam("user_pass") String pass,
-                           @RequestParam("user_name") String name,
-                           @RequestParam("user_email") String email,
-                           @RequestParam("user_tel") String tel,
-                           @RequestParam("user_local") String local) {
+//    @PostMapping("/re_login")
+//    public String re_login(@RequestParam("user_id") String id,
+//                           @RequestParam("user_pass") String pass,
+//                           @RequestParam("user_name") String name,
+//                           @RequestParam("user_email") String email,
+//                           @RequestParam("user_tel") String tel,
+//                           @RequestParam("user_local") String local) {
+//
+//        System.out.println("ID : "+id);
+//        System.out.println("Password : "+pass);
+//        System.out.println("Name : "+name);
+//        System.out.println("Email : "+email);
+//        System.out.println("Tel : "+tel);
+//        System.out.println("Local : "+local);
+//
+//
+//        return "result";
+//    }
 
-        System.out.println("ID : "+id);
-        System.out.println("Password : "+pass);
-        System.out.println("Name : "+name);
-        System.out.println("Email : "+email);
-        System.out.println("Tel : "+tel);
-        System.out.println("Local : "+local);
+    @PostMapping("/re_login")
+    public String re_login(@ModelAttribute login l) { //@ModelAttribute는 생략 가능함
+
+        System.out.println("ID : "+l.getUser_id());
+        System.out.println("Password : "+l.getUser_pass());
+        System.out.println("Name : "+l.getUser_name());
+        System.out.println("Email : "+l.getUser_email());
+        System.out.println("Tel : "+l.getUser_tel());
+        System.out.println("Local : "+l.getUser_local());
 
 
         return "result";
     }
+
 
 
 }
