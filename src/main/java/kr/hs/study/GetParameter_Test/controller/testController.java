@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -40,6 +41,16 @@ public class testController {
         model.addAttribute("d1",d1);
         model.addAttribute("d2",d2);
         return "test4";
+    }
+
+    @GetMapping("/test5")
+    public ModelAndView test5(@RequestParam String data7,
+                              @RequestParam String data8,
+                              ModelAndView mv){
+        mv.addObject("data7",data7);
+        mv.addObject("data8",data8);
+        mv.setViewName("test5");
+        return mv;
     }
 
 
