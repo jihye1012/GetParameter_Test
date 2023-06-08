@@ -1,11 +1,9 @@
 package kr.hs.study.GetParameter_Test.controller;
 
+import kr.hs.study.GetParameter_Test.dto.test7;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -51,6 +49,22 @@ public class testController {
         mv.addObject("data8",data8);
         mv.setViewName("test5");
         return mv;
+    }
+
+    @GetMapping("/test6")
+    public String test6(Model model){
+        model.addAttribute("name","kim");
+        model.addAttribute("password","1111");
+        return "test6";
+    }
+
+    @GetMapping("/test7")
+    public String test7(@ModelAttribute test7 t, Model model){
+        String d8=t.getData8();
+        String d9=t.getData9();
+        model.addAttribute("d8",d8);
+        model.addAttribute("d9",d9);
+        return "test7";
     }
 
 
