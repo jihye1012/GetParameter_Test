@@ -2,11 +2,14 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Index</title>
+    <title>Title</title>
 </head>
 <body>
-<h1 th:text="'Welcome Getparameter'"></h1>
-<br><a th:href="@{/login}">Login</a></br>
+<h1 th:text="'Model and View'"></h1><br/>
+<a th:href="@{test1}">test1</a><br/>
+<a th:href="@{test2?data1=100&data2=200}">test2</a><br/>
+<a th:href="@{test3/300/400}">test3</a><br/>
+<a th:href="@{test4?data1=500&data2=600}">test4</a><br/>
 
 </body>
 </html>

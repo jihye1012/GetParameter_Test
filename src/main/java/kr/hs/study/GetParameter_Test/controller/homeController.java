@@ -6,10 +6,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
-public class HomeController {
+public class homeController {
     @GetMapping("/index")
-    public String test1(HttpServletRequest req) {
-
-        return "login";
+    public String index(HttpServletRequest req){
+        return "index";
     }
+
 }
+
